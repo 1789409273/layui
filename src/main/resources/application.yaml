@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: .
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.yang.layui.bean
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  level:
+    com.yang.layui.dao: debug
